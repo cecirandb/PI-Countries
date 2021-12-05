@@ -70,9 +70,9 @@ __IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden ut
 
 ### Únicos Endpoints/Flags que pueden utilizar
 
-  - GET https://restcountries.com/v3.1/all
-  - GET https://restcountries.com/v3.1/name/{name}
-  - GET https://restcountries.com/v3.1/alpha/{code}
+  - GET https://restcountries.com/v3/all
+  - GET https://restcountries.com/v3/name/{name}
+  - GET https://restcountries.com/v3/alpha/{code}
 
 ### Requerimientos mínimos:
 
