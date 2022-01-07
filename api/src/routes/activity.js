@@ -8,23 +8,28 @@ router.post('/', async (req, res) => {
 
     try {
 
-        const newActivity = await Activity.create({
-            name: name,
-            difficulty: difficulty,
-            duration: duration,
-            season: season
-        })
-
-        const findCountry = await Country.findAll({
+        const [activity, created] = await Activity.findOrCreate({
             where: {
-                name: countries
+                name,
+                difficulty,
+                duration,
+                season
             }
         })
 
-        await newActivity.addCountry(findCountry);
+        await activity.addCountries(countries);
 
         res.status(200).json('Activity created successfully :)');
         
+    } catch (err) { console.log(err) }
+})
+
+router.get('/', async (req, res) => {
+    try {
+        
+        let activities = await Activity.findAll();
+        res.json(activities); 
+
     } catch (err) { console.log(err) }
 })
 

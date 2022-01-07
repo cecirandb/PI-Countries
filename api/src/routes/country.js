@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
         } else {
 
             const countries = await Country.findAll({
-                attributes: ['flags', 'name', 'continent']
+                attributes: ['id', 'flags', 'name', 'continent']
             })
 
             res.status(200).json(countries)
