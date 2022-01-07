@@ -1,0 +1,8 @@
+.loading {
+    display: flex;
+    background-image: url(loading.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-content: center;
+}

@@ -1,0 +1,18 @@
+.paginado {
+    margin-right: 210px;
+    display: flex;
+    justify-content: center;
+}
+
+.num {
+    background-color: rgba(0, 0, 0, 0.76);
+    padding: 4px;
+    margin: 2px;
+    border-radius: 10px;
+    color: rgb(187, 187, 187);
+    font-weight: bold;
+}
+
+.navpag {
+    margin: 40px;
+}

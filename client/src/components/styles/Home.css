@@ -1,0 +1,9 @@
+.divHome {
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+    display: inline-block;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    padding-left: 380px;
+}
