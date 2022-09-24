@@ -1,22 +1,23 @@
 import React from "react";
-import './styles/Paginado.css';
+import "./styles/Paginado.css";
 
 export default function Paginado({ countriesPerPage, allConutries, paginado }) {
-    const pageNumbers = [];
+  const pageNumbers = [];
 
-    for (let i = 1; i <= Math.ceil(allConutries/countriesPerPage); i++) {
-        pageNumbers.push(i);
-    }
+  for (let i = 1; i <= Math.ceil(allConutries / countriesPerPage); i++) {
+    pageNumbers.push(i);
+  }
 
-    return(
-        <nav className='navpag'>
-            <ul className="paginado">
-                { pageNumbers && pageNumbers.map(num => (
-                    <span className="num" key={num}>
-                    <a onClick={() => paginado(num)}>{num}</a>
-                    </span>
-                ))}
-            </ul>
-        </nav>
-    )
+  return (
+    <nav className="navpag">
+      <ul className="paginado">
+        {pageNumbers &&
+          pageNumbers.map((num) => (
+            <span className="num" key={num}>
+              <a onClick={() => paginado(num)}>{num}</a>
+            </span>
+          ))}
+      </ul>
+    </nav>
+  );
 }

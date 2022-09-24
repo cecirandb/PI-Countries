@@ -78,6 +78,9 @@ const rootReducer = (state = initialState, { type, payload }) => {
             ...state,
             countries: [...state.countries2.sort((a, b) => b.name > a.name ? 1 : b.name < a.name ? -1 : 0)]
             }
+        } else return {
+            ...state,
+            countries: [...state.countries2.sort((a, b) => a.name > b.name ? 1 : a.name < b.name ? -1 : 0)]
         }
 
         case ORDER_POPULATION: 
